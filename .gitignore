@@ -1,14 +1,7 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## User settings
+# User settings
 xcuserdata/
 
-## Obj-C/Swift specific
-*.hmap
-
-## App packaging
+# App bundles and symbols
 *.ipa
 *.dSYM.zip
 *.dSYM
@@ -17,46 +10,46 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
+# macOS
+.DS_Store
+
+# Xcode
+*.xcworkspace          # workspaces generados (CocoaPods, SPM, etc.)
+*.xcodeproj/xcuserdata # datos de usuario del proyecto
+*.xcactivitylog        # logs de build
+*.xccheckout           # checkouts temporales
+*.xcscmblueprint       # metadatos de SCM
+
 # Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
-
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
-# Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
+.swiftpm/
+Package.resolved
+**/.build
 
 # fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Demo-specific
+Pods/
+Carthage/Build/
+Carthage/Checkouts/
+
+# IDEs & Config
+.idea/
+.vscode/
+
+# ──────────────
+# NOTA: Queremos versionar el .xcframework de Phylax, así que eliminamos la regla que lo ignoraba.
+# Si quisieras seguir ignorando otros .xcframework, podrías hacer:
+#   *.xcframework/
+#   !PhylaxSDK-*.xcframework/
+#
+# Xcode derived data & build products
+DerivedData/
+build/
+
+# Logs y temporales
+*.log
+*.tmp
