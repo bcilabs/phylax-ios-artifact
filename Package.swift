@@ -11,7 +11,7 @@ let package = Package(
   targets: [
     .binaryTarget(
       name: "PhylaxSDK",
-      path: "PhylaxSDK-v0.0.1.xcframework"
+      path: "PhylaxSDK-v0.0.2.xcframework"
     )
   ]
 )
